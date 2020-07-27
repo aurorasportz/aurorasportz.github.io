@@ -1,0 +1,21 @@
+{
+  "short_name": "Aurora",
+  "name": "Aurora Sportz - HTML",
+  "icons": [
+    {
+      "src": "assets/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
+  "background_color": "#ffffff",
+  "theme_color": "#777777",
+  "display": "standalone",
+  "orientation": "portrait"
+}

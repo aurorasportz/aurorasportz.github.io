@@ -1,0 +1,153 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+	<meta content="Aurora" property="og:site_name">
+	<meta content="Sports Wears, Masks and Other Garments..." name="description">
+	<meta content="Aurora" data-hid="og:title" property="og:title">
+	<meta content="Sports Wears, Masks and Other Garments..."  property="og:description">
+	<meta content="assets/logo/share.png" property="og:image">
+	<meta content="https://aurorasportz.com/" data-hid="og:url" property="og:url">
+
+	<!-- IMPORTANT -->
+	<!-- Change this value -->
+	<!-- Needed for name resolution when providing relative paths -->
+
+	<link rel="apple-touch-icon" sizes="any" href="assets/images/squarelogo.png" />
+	<link rel="icon" href="assets/images/64x64.ico" sizes="64x64" type="image/x-icon" />
+	<link rel="shortcut icon" sizes="any" href="assets/images/icoanysize.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+	<!-- MANIFEST FILE FOR PWA -->
+	<link rel="manifest" href="manifest.json">
+
+	<!-- THEME Color -->
+	<!--
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="theme-color" content="#249adf"> -->
+
+	<title>Aurora - Sports Wears, Masks and Other Garments</title>
+
+<meta charset="utf-8">
+	
+</head>
+<body>
+	<header>
+
+	</header>
+	<section class="wrapper">
+		<div class="stage1_cont">
+			<picture>
+				<source media="(min-width: 1200px) and (orientation:landscape)" srcset="assets/images/stage1/bgpc.jpg">
+				<source media="(min-width: 640px) and (orientation:landscape)" srcset="assets/images/stage1/bgtab2.jpg">
+				<source media="(min-width: 640px) and (orientation:portrait)" srcset="assets/images/stage1/bgtab.jpg">
+				<source media="(orientation:portrait)" srcset="assets/images/stage1/bgmob.jpg">
+				<img src="assets/images/stage1/bgpc.jpg" >
+			</picture>
+			<div class="item item1">
+				<h5>Team Jerseys</h5>
+				<img src="assets/images/stage1/c1.png">
+			</div>
+			<div class="item item2">
+				<h5>Tracksuits</h5>
+				<img src="assets/images/stage1/c2.png">
+			</div>
+			<div class="item item3">
+				<img src="assets/images/stage1/c3.png">
+				<h5>Sports Wears</h5>
+			</div>
+			<div class="item item4">
+				<img src="assets/images/stage1/c4.png">
+				<h5>Face Masks</h5>
+			</div>
+
+			<div class="logobreak">
+				<img src="assets/images/stage1/logobreak.png">
+			</div>
+			<div class="bannertext">
+				<h1 class="line1">Aurora</h1>
+			</div>
+			<div class="loading anim-typewriter">
+				<p class="loadingtext">Now Loading...</p>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer_cont">
+			
+		</div>
+	</footer>
+	<script>
+	    if ( navigator.serviceWorker ) {
+	        navigator.serviceWorker.register("sw.js")
+	            .then( function(reg){
+	                console.log('Service worker registration', reg);
+	            })
+	            .catch( function(err){
+	                console.error('Service Worker Error', err);
+	            });
+
+	        window.addEventListener('beforeinstallprompt', function (event) {
+	            var e = event;
+
+	            e.preventDefault();
+
+	            /*
+	                document.getElementById('some_id').onclick = function (e) {
+	                    e.prompt().then(function (result) {
+	                        if ( result.outcome === 'accepted' ) {
+	                            // do something
+	                        }
+	                    });
+	                }
+	            */
+	        });
+	    }
+	</script>
+	<script>
+	!function () {
+	    var assets = 'assets',
+	        libs = [assets + '/build/common.js'],
+	        scripts = [],
+	        loadScript = function (i) {
+	            var script = scripts[i];
+
+	            if (script) {
+	                script = document.createElement('script');
+	                script.async = true;
+	                script.src = scripts[i];
+	                document.head.appendChild(script);
+
+	                script.onload = function (e) {
+	                    script = undefined;
+	                    loadScript(i+1);
+	                };
+
+	                script.onerror = function (e) {
+	                    console.error('No more scripts will be loaded because "' + script.src + '" failed to load!');
+	                };
+	            } else {
+	                loadScript = script_file = scripts = undefined;
+	            }
+	        };
+
+	    scripts.push(assets + '/build/common.js');
+
+	    // concat all scripts
+	    scripts = libs.concat(scripts);
+
+	    // start loading scripts
+	    loadScript(0);
+	}();
+	</script>
+</body>
+</html>
